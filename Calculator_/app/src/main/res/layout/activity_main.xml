@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_color"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/math_op_2"
+        android:layout_width="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_height="35sp"
+        android:textColor="@color/txt_color2"
+        android:textSize="25sp"
+        android:gravity="end"
+        android:ellipsize="start"
+        android:singleLine="true"
+        />
+    <TextView
+        android:id="@+id/math_operation"
+        android:layout_width="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_height="90sp"
+        android:textColor="@color/txt_color"
+        android:textSize="60sp"
+        android:gravity="end"
+        android:ellipsize="start"
+        android:singleLine="true"
+        />
+    <View style="@style/Delimiter" />
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="4dp" >
+    </FrameLayout>
+
+</LinearLayout>
