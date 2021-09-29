@@ -35,13 +35,19 @@ android {
         viewBinding true
     }
 
+    flavorDimensions("version")
+
     productFlavors{
         create("demo") {
+            dimension = "version"
+            applicationIdSuffix = ".demo"
+            versionNameSuffix = "-demo"
 
-            versionName = "1.0-demo"
         }
         create("full") {
-
+            dimension = "version"
+            applicationIdSuffix = ".full"
+            versionNameSuffix = "-full"
         }
     }
 }
