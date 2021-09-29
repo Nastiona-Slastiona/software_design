@@ -34,6 +34,16 @@ android {
     buildFeatures{
         viewBinding true
     }
+
+    productFlavors{
+        create("demo") {
+
+            versionName = "1.0-demo"
+        }
+        create("full") {
+
+        }
+    }
 }
 
 dependencies {

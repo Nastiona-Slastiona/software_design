@@ -16,6 +16,12 @@ class CalculatorViewModel : ViewModel(){
     val messageForFragment: MutableLiveData<String> by lazy{
         MutableLiveData<String>()
     }
+    val messageChangeMode1: MutableLiveData<String> by lazy{
+        MutableLiveData<String>()
+    }
+    val messageChangeMode2: MutableLiveData<String> by lazy{
+        MutableLiveData<String>()
+    }
     val messageChangeMode: MutableLiveData<String> by lazy{
         MutableLiveData<String>()
     }

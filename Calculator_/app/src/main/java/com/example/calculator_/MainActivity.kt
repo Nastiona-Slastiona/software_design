@@ -1,6 +1,7 @@
 package com.example.calculator_
 import android.os.Bundle
 import android.util.Log
+import android.view.LayoutInflater
 import android.view.View
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
@@ -14,7 +15,7 @@ class MainActivity : AppCompatActivity() {
         val SAVE_OP = "saved_operation"
         val SAVE_RES = "saved_result"
         val SAVE_MODE = "saved_mode"
-
+        var count: Int = 0
         private val viewModel: CalculatorViewModel by viewModels()
         lateinit var binding: ActivityMainBinding
 
@@ -30,15 +31,15 @@ class MainActivity : AppCompatActivity() {
                 with(savedInstanceState) {
                     binding.mathOperation.text = getString(SAVE_OP)
                     binding.mathOp2.text = getString(SAVE_RES)
-
-                    if(getString(SAVE_MODE) == "BASIC")
+                    count = getInt("COUNT")
+                    /*if(getString(SAVE_MODE) == "BASIC")
                         viewModel.mode = CalculatorViewModel.Mode.BASIC
-                    else viewModel.mode = CalculatorViewModel.Mode.SCIENTIFIC
+                    else viewModel.mode = CalculatorViewModel.Mode.SCIENTIFIC*/
                 }
 
             }
 
-            if(viewModel.mode == CalculatorViewModel.Mode.BASIC)
+            if(count % 2 == 0)
                 openFrag(BaseOperationsFragment(), R.id.fragment_container)
             else
                 openFrag(ScientificOperationsFragment(), R.id.fragment_container)
@@ -54,10 +55,12 @@ class MainActivity : AppCompatActivity() {
                 binding.mathOp2.text = it
             })
             viewModel.messageChangeMode.observe(this, {
-                if(viewModel.mode == CalculatorViewModel.Mode.BASIC)
-                    openFrag(BaseOperationsFragment(), R.id.fragment_container)
-                else
-                    openFrag(ScientificOperationsFragment(), R.id.fragment_container)
+                if(count % 2 == 0) {
+                    if (viewModel.mode == CalculatorViewModel.Mode.BASIC)
+                        openFrag(BaseOperationsFragment(), R.id.fragment_container)
+                    else
+                        openFrag(ScientificOperationsFragment(), R.id.fragment_container)
+                }
             })
 
 
@@ -97,9 +100,11 @@ class MainActivity : AppCompatActivity() {
 
         override fun onSaveInstanceState(outState: Bundle) {
             outState.run {
+                count += 1
                 putString(SAVE_OP, math_operation.text.toString())
                 putString(SAVE_RES, math_op_2.text.toString())
                 putString(SAVE_MODE, viewModel.mode.name.toString())
+                putInt("COUNT", count)
                 Log.d("Name of mode" , viewModel.mode.name.toString())
 
             }
