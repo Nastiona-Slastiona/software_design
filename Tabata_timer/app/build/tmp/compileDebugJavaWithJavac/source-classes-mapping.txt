@@ -1,0 +1,27 @@
+ppo/tabata/databinding/ActivityTimerBinding.java
+ ppo.tabata.databinding.ActivityTimerBinding
+ppo/tabata/databinding/ContentMainBinding.java
+ ppo.tabata.databinding.ContentMainBinding
+ppo/tabata/databinding/RecyclerviewItemBinding.java
+ ppo.tabata.databinding.RecyclerviewItemBinding
+ppo/tabata/databinding/FragmentTabataEditBinding.java
+ ppo.tabata.databinding.FragmentTabataEditBinding
+ppo/tabata/databinding/ActivityMainBinding.java
+ ppo.tabata.databinding.ActivityMainBinding
+ppo/tabata/data/TabataDAO_Impl.java
+ ppo.tabata.data.TabataDAO_Impl
+ ppo.tabata.data.TabataDAO_Impl$1
+ ppo.tabata.data.TabataDAO_Impl$2
+ ppo.tabata.data.TabataDAO_Impl$3
+ ppo.tabata.data.TabataDAO_Impl$4
+ ppo.tabata.data.TabataDAO_Impl$5
+ ppo.tabata.data.TabataDAO_Impl$6
+ppo/tabata/databinding/FragmentTabataListBinding.java
+ ppo.tabata.databinding.FragmentTabataListBinding
+ppo/tabata/data/TabataDatabase_Impl.java
+ ppo.tabata.data.TabataDatabase_Impl
+ ppo.tabata.data.TabataDatabase_Impl$1
+ppo/tabata/databinding/ActivitySettingsBinding.java
+ ppo.tabata.databinding.ActivitySettingsBinding
+ppo/tabata/BuildConfig.java
+ ppo.tabata.BuildConfig
